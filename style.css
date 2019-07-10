@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
+
+:root {
+	--primary-color: #f7a72d;
+	--secondary-color: #0858D2;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arimo', sans-serif;
+	background: #eee;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #111;
+	padding: .5rem;
+}
+
+a:hover {
+	color: var(--primary-color);
+}
+
+p {
+	max-width: 60rem;
+}
+
+h1, h2 {
+	margin-bottom: 1rem;
+}
+
+/* Navigation */
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	padding: .75rem 1rem;
+	height: 2.5rem;
+	align-items: center;
+	letter-spacing: 1px;
+}
+
+.links-container {
+}
+
+.links {
+	display: flex;
+	list-style: none;
+}
+
+.links > li {
+	margin-left: .8rem;
+}
+
+.links > li:first-child {
+	margin-left: 0;
+}
+
+.links > li:hover {
+	color: var(--primary-color);
+	cursor: pointer;
+}
+
+.more-links {
+	position: absolute;
+	z-index: 99;
+	background: var(--primary-color);
+	right: -50vw;
+	top: 2.5rem;
+	height: calc(100vh - 2.5rem);
+	width: 50vw;
+	max-width: 40rem;
+	text-align: center;
+	transition: transform 1s;
+}
+
+.more-links.active {
+	transform: translateX(-50vw);
+}
+
+.more-links ul {
+	list-style: none;
+}
+
+.more-links li {
+	margin: 4rem 1rem; 
+}
+
+.more-links a {
+	padding: .5rem 1rem;
+}
+
+.more-links a:hover {
+	color: #eee; 
+	cursor: pointer;
+}
+
+/* Landing */
+
+.landing {
+	height: 50vh;
+	min-height: 20rem;
+	background: bottom left / cover url(./images/bay-boats-dock-58597.jpg);
+	color: #eee;
+	text-shadow: 2px 2px #222;
+	justify-content: center;
+}
+
+.landing-button {
+	width: 10rem;
+}
+
+/* Featured */
+
+.featured {
+	background: var(--secondary-color);
+	color: #eee;
+}
+
+/* Subscribe */
+
+.subscribe-now {
+	display: flex;
+	flex-direction: column;
+}
+
+.subscribe-now input:first-child {
+	border: none;
+	padding: .5rem 1rem;
+	font-size: 1rem;
+	margin-bottom: .5rem;
+	transition: .5s;
+}
+
+.subscribe-now input:first-child:focus {
+	transform: scale(1.1);
+}
+
+.footer {
+	padding: 1rem;
+	text-align: center;
+	background: #333;
+
+}
+
+.footer p {
+	margin: auto;
+	color: #eee;
+}
+
+/* Utility */
+
+.button {
+	font-family: 'Arimo', sans-serif;
+	font-size: 1rem;
+	border: 0;
+	padding: .3rem 1rem;
+	background-color: var(--primary-color);
+	cursor: pointer;
+	transition: 400ms;
+}
+
+.button:hover {
+	color: #eee;
+	background: var(--secondary-color);
+}
+
+.container {
+	padding: 1.5rem;
+	line-height: 1.4;
+	display: flex;
+	flex-direction: column;
+}
+
+.container p {
+	margin-bottom: 1rem;
+}
+
+/* Media Query */
+
+@media (min-width: 868px) and (min-height: 800px) {
+	h2 {
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.navigation {
+		padding: .75rem 4rem;
+	}
+
+	.main-content {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+	}
+
+	.landing {
+		height: calc(100vh - 2.5rem);
+		grid-row: span 2;
+		padding: 4rem;
+	}
+
+	.landing h1 {
+		font-size: 6rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.landing p, .landing-button {
+		font-size: 2rem;
+	}
+
+	.landing-button {
+		width: 16rem;
+	}
+
+	.featured p:nth-of-type(1) {
+		margin-bottom: 2rem;
+	}
+
+	.container {
+		padding: 1rem 3rem;
+	}
+}
+
+@media screen and (max-height: 800px) and (min-width: 868px) {
+	.landing {
+		height: calc(100vh - 2.5rem);
+	}
+
+	.landing h1 {
+		font-size: 6rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.landing p, .landing-button {
+		font-size: 2rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
